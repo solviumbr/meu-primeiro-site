@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Velox Solar Guarulhos - Economia Inteligente</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        :root {
+            --velox-blue: #162850;
+            --velox-green: #4ce85a;
+            --velox-btn-green: #77d944;
+        }
+
+        .bg-velox-blue { background-color: var(--velox-blue); }
+        .text-velox-blue { color: var(--velox-blue); }
+        .text-velox-green { color: var(--velox-green); }
+
+        .btn-velox {
+            background-color: var(--velox-btn-green);
+            color: white;
+            border: 2px solid var(--velox-btn-green);
+            transition: all 0.3s ease;
+            font-weight: bold;
+            padding: 12px 32px;
+            border-radius: 8px;
+            display: inline-block;
+            text-align: center;
+        }
+
+        .btn-velox:hover {
+            background-color: transparent;
+            color: var(--velox-blue);
+            border-color: var(--velox-btn-green);
+        }
+
+        .btn-footer:hover {
+            background-color: white !important;
+            color: var(--velox-blue) !important;
+            border-color: white !important;
+        }
+
+        .hero-section {
+            background: linear-gradient(rgba(22, 40, 80, 0.85), rgba(22, 40, 80, 0.85)), url('https://images.unsplash.com/photo-1508514177221-188b1cf16e9d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .simulador-badge {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border: 1px solid var(--velox-green);
+            border-radius: 15px;
+        }
+    </style>
+</head>
+<body class="font-sans text-gray-800 bg-white">
+
+    <nav class="sticky top-0 z-50 bg-white shadow-md p-4">
+        <div class="container mx-auto flex justify-between items-center">
+            <img src="https://veloxsolar.com/wp-content/uploads/2024/12/logo-solar-intranet.png" alt="Velox Solar" class="h-10 w-auto">
+            <div class="flex items-center gap-4">
+                <a href="https://instagram.com/veloxsolarguarulhos" target="_blank" class="text-velox-blue hover:text-velox-green transition text-xl">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://bit.ly/4sHw6S2" target="_blank" class="btn-velox py-2 px-4 text-xs uppercase">Simular Agora</a>
+            </div>
+        </div>
+    </nav>
+
+    <header class="hero-section min-h-screen flex items-center text-white py-12">
+        <div class="container mx-auto px-6">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h1 class="text-4xl md:text-6xl font-extrabold leading-tight mb-6">
+                        Gerando economia em <span class="text-velox-green">Guarulhos</span> com tecnologia.
+                    </h1>
+                    <p class="text-xl mb-8 text-gray-100">
+                        Reduza sua conta de luz em até 95% com quem tem mais de 15 anos de história no mercado de energia renovável.
+                    </p>
+                    <a href="https://bit.ly/4sHw6S2" target="_blank" class="btn-velox text-lg">QUERO UM ORÇAMENTO GRATUITO</a>
+                </div>
+
+                <div class="simulador-badge p-8 text-center">
+                    <div class="inline-block bg-velox-green text-velox-blue font-bold px-4 py-1 rounded-full text-sm mb-4 uppercase">
+                        Simulador Inteligente
+                    </div>
+                    <h2 class="text-2xl font-bold mb-4">Calcule sua Economia</h2>
+                    <p class="text-gray-200 mb-6">Nosso assistente virtual está pronto para realizar sua simulação personalizada em tempo real.</p>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="py-12 bg-gray-50 border-b border-gray-200 text-center">
+        <div class="container mx-auto px-6 grid md:grid-cols-3 gap-8">
+            <div>
+                <h3 class="text-4xl font-bold text-velox-blue">+15 Anos</h3>
+                <p class="text-gray-500 font-medium uppercase text-xs tracking-widest">Experiência de Mercado</p>
+            </div>
+            <div>
+                <h3 class="text-4xl font-bold text-velox-blue">+5.000</h3>
+                <p class="text-gray-500 font-medium uppercase text-xs tracking-widest">Projetos no Brasil</p>
+            </div>
+            <div>
+                <h3 class="text-4xl font-bold text-velox-green">GUARULHOS</h3>
+                <p class="text-gray-500 font-medium uppercase text-xs tracking-widest">Atendimento Local Premium</p>
+            </div>
+        </div>
+    </section>
+
+    <footer id="contato" class="py-20 bg-velox-blue text-white">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-2 gap-16 items-start text-left mb-16">
+                <div>
+                    <img src="https://veloxsolar.com/wp-content/uploads/2024/12/logo-solar-intranet.png" alt="Velox Solar" class="h-12 mb-8 brightness-0 invert">
+                    <h2 class="text-3xl font-extrabold mb-6 leading-tight">Sua independência energética começa aqui.</h2>
+                    <div class="space-y-4 text-blue-100">
+                        <p class="flex items-start gap-3">
+                            <i class="fas fa-map-marker-alt text-velox-green mt-1"></i>
+                            <span><strong>GUARU PLAZA SHOPPING</strong><br>R. Felício Marcondes, 266<br>Centro, Guarulhos - SP, 07010-030</span>
+                        </p>
+                        <p class="flex items-center gap-3">
+                            <i class="fas fa-envelope text-velox-green"></i>
+                            <span>guarulhos.centro@veloxsolarenergia.com.br</span>
+                        </p>
+                        <p class="flex items-center gap-3">
+                            <i class="fab fa-instagram text-velox-green"></i>
+                            <span>@veloxsolarguarulhos</span>
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="flex flex-col items-center justify-center bg-white/5 p-10 rounded-2xl border border-white/10 h-full">
+                    <h3 class="text-2xl font-bold mb-6">FALE CONOSCO</h3>
+                    <a href="https://bit.ly/4sHw6S2" target="_blank" class="btn-velox btn-footer text-lg w-full">
+                        <i class="fab fa-whatsapp mr-2"></i> ATENDIMENTO PELO WHATSAPP
+                    </a>
+                    <p class="mt-6 text-sm text-blue-200">Atendimento imediato.</p>
+                </div>
+            </div>
+
+            <div class="pt-8 border-t border-white/10 text-center text-sm text-blue-300">
+                <p>© 2026 Velox Solar Guarulhos - Franqueado Autorizado. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+      (function(e, t, n) {
+        let a = document.createElement("ra-chatbot-widget");
+        a.id = "ra_wc_chatbot";
+        a.setAttribute("slug", "arll4suKM2WNQxqahZywCINmOQr0rw1k8HuGawib");
+        document.body.appendChild(a);
+        
+        let d = e.scripts[e.scripts.length - 1],
+            r = e.createElement("script");
+
+        r.id = "ra_chatbot" + Math.floor(200 * Math.random());
+        r.defer = true;
+        r.src = "https://sitewidget.net/chatbot-sdk.js";
+        d.parentElement.insertBefore(r, d.nextSibling);
+      })(document);
+    </script>
+
+</body>
+</html>
