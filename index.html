@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Velox Solar Guarulhos - Sustentabilidade e Economia</title>
+    <title>Velox Solar Guarulhos - Portfólio e Soluções</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
@@ -13,9 +13,8 @@
             --velox-btn-green: #77d944;
         }
 
-        /* Menu Transparente com leve sombra para destacar o logo colorido */
         .nav-transparent {
-            background: linear-gradient(to bottom, rgba(255,255,255,0.2) 0%, rgba(255,255,255,0) 100%);
+            background: linear-gradient(to bottom, rgba(255,255,255,0.3) 0%, rgba(255,255,255,0) 100%);
             position: absolute;
             top: 0;
             left: 0;
@@ -28,41 +27,54 @@
                         url('https://images.unsplash.com/photo-1508514177221-188b1cf16e9d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80');
             background-size: cover;
             background-position: center;
-            min-height: 100vh;
+            min-height: 80vh;
             display: flex;
             align-items: center;
         }
 
-        /* AJUSTE DE TAMANHO DO LOGO - Estilo Site Oficial */
         .logo-velox {
             height: auto;
             width: 100%;
-            max-width: 280px; /* Largura ampliada para visibilidade real */
+            max-width: 280px;
+        }
+
+        /* Cards de Portfólio */
+        .portfolio-card {
+            transition: transform 0.3s ease;
+            border-radius: 15px;
+            overflow: hidden;
+            background: white;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+        }
+        .portfolio-card:hover {
+            transform: translateY(-10px);
+        }
+
+        /* Badge de Economia */
+        .economy-badge {
+            background-color: var(--velox-green);
+            color: var(--velox-blue);
+            font-weight: 800;
+            padding: 5px 15px;
+            border-radius: 5px;
         }
 
         .btn-velox {
             background-color: var(--velox-btn-green);
             color: white;
-            border: 2px solid var(--velox-btn-green);
-            transition: all 0.3s ease;
             font-weight: bold;
             padding: 14px 40px;
             border-radius: 8px;
-            display: inline-block;
             text-transform: uppercase;
+            transition: 0.3s;
         }
-
         .btn-velox:hover {
-            background-color: transparent;
-            color: white;
-            border-color: var(--velox-btn-green);
+            filter: brightness(1.1);
         }
 
         .btn-social-footer {
             background-color: white;
             color: var(--velox-blue);
-            border: 2px solid white;
-            transition: all 0.3s ease;
             font-weight: bold;
             padding: 12px 20px;
             border-radius: 8px;
@@ -71,99 +83,166 @@
             gap: 12px;
             width: fit-content;
             min-width: 240px;
+            transition: 0.3s;
         }
-
         .btn-social-footer:hover {
             background-color: var(--velox-green);
-            border-color: var(--velox-green);
-            color: var(--velox-blue);
         }
     </style>
 </head>
-<body class="font-sans text-gray-800 bg-white">
+<body class="font-sans text-gray-800 bg-gray-50">
 
     <nav class="nav-transparent p-6 md:p-10">
         <div class="container mx-auto flex justify-center md:justify-start">
-            <img src="https://github.com/solviumbr/meu-primeiro-site/blob/main/Logo-VeloxSolar-Final-04.png?raw=true" 
-                 alt="Velox Solar" 
-                 class="logo-velox">
+            <img src="https://github.com/solviumbr/meu-primeiro-site/blob/main/Logo-VeloxSolar-Final-04.png?raw=true" alt="Velox Solar" class="logo-velox">
         </div>
     </nav>
 
     <header class="hero-section text-white text-center">
         <div class="container mx-auto px-6">
             <div class="max-w-4xl mx-auto mt-20">
-                <h1 class="text-4xl md:text-7xl font-extrabold leading-tight mb-8">
-                    Iluminando o caminho para um <span class="text-velox-green">futuro sustentável</span>.
-                </h1>
-                <p class="text-xl md:text-2xl mb-12 text-gray-100 opacity-90">
-                    Reduza sua conta de luz em até 95% com quem tem mais de 15 anos de história no mercado de energia renovável.
-                </p>
-                <a href="https://wa.me/551152865321?text=Ol%C3%A1,%20encontrei%20a%20Velox%20Solar%20no%20Google" target="_blank" class="btn-velox">
-                    Quero um Orçamento Gratuito
-                </a>
+                <h1 class="text-4xl md:text-7xl font-extrabold leading-tight mb-6">Projetos de <span class="text-velox-green">Alta Performance</span>.</h1>
+                <p class="text-xl md:text-2xl mb-12 text-gray-100">Mais de 5.000 sistemas instalados transformando sol em economia real.</p>
+                <a href="https://wa.me/551152865321" target="_blank" class="btn-velox">Solicitar Estudo de Viabilidade</a>
             </div>
         </div>
     </header>
 
-    <section class="py-20 bg-gray-50 border-b border-gray-200 text-center">
-        <div class="container mx-auto px-6 grid md:grid-cols-3 gap-12">
-            <div>
-                <h3 class="text-5xl font-bold text-velox-blue mb-2">+15 Anos</h3>
-                <p class="text-gray-500 font-medium uppercase text-sm tracking-widest">Experiência de Mercado</p>
+    <section class="py-24 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-velox-blue text-4xl font-extrabold mb-4 uppercase">Portfólio 2024</h2>
+                <div class="w-24 h-1 bg-velox-green mx-auto"></div>
             </div>
-            <div>
-                <h3 class="text-5xl font-bold text-velox-blue mb-2">+5.000</h3>
-                <p class="text-gray-500 font-medium uppercase text-sm tracking-widest">Projetos Entregues</p>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
+                
+                <div class="portfolio-card border">
+                    <img src="https://veloxsolar.com/wp-content/uploads/2024/08/portfolio-1.jpg" class="w-full h-56 object-cover" alt="Residencial">
+                    <div class="p-6">
+                        <span class="text-xs font-bold text-velox-green tracking-widest uppercase">Projeto Residencial</span>
+                        <h3 class="text-2xl font-bold text-velox-blue mt-2 mb-4">Eficiência para o Lar</h3>
+                        <p class="text-gray-600 text-sm mb-6 leading-relaxed">Referência em gerenciamento de soluções visando economia e sustentabilidade doméstica.</p>
+                        <div class="grid grid-cols-2 gap-4 text-xs border-t pt-4">
+                            <div><p class="font-bold text-velox-blue">Potência</p><p>67,7 kWp</p></div>
+                            <div><p class="font-bold text-velox-blue">Geração</p><p>8.200 kWh/mês</p></div>
+                        </div>
+                        <div class="mt-6 flex items-center justify-between bg-gray-50 p-3 rounded">
+                            <span class="text-xs font-bold text-gray-400">ECONOMIA MENSAL</span>
+                            <span class="economy-badge">R$ 9.354</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="portfolio-card border">
+                    <img src="https://veloxsolar.com/wp-content/uploads/2024/08/energiasolar-agro.jpg" class="w-full h-56 object-cover" alt="Agro">
+                    <div class="p-6">
+                        <span class="text-xs font-bold text-velox-green tracking-widest uppercase">Projeto Agro</span>
+                        <h3 class="text-2xl font-bold text-velox-blue mt-2 mb-4">Energia no Campo</h3>
+                        <p class="text-gray-600 text-sm mb-6 leading-relaxed">Soluções energéticas visando rentabilidade para o agronegócio moderno.</p>
+                        <div class="grid grid-cols-2 gap-4 text-xs border-t pt-4">
+                            <div><p class="font-bold text-velox-blue">Potência</p><p>112 kWp</p></div>
+                            <div><p class="font-bold text-velox-blue">Geração</p><p>14.000 kWh/mês</p></div>
+                        </div>
+                        <div class="mt-6 flex items-center justify-between bg-gray-50 p-3 rounded">
+                            <span class="text-xs font-bold text-gray-400">ECONOMIA MENSAL</span>
+                            <span class="economy-badge">R$ 7.000</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="portfolio-card border">
+                    <img src="https://veloxsolar.com/wp-content/uploads/2024/08/solar-industrial.jpg" class="w-full h-56 object-cover" alt="Industrial">
+                    <div class="p-6">
+                        <span class="text-xs font-bold text-velox-green tracking-widest uppercase">Projeto Industrial</span>
+                        <h3 class="text-2xl font-bold text-velox-blue mt-2 mb-4">Força Industrial</h3>
+                        <p class="text-gray-600 text-sm mb-6 leading-relaxed">Engenharia de ponta para redução drástica de custos operacionais em indústrias.</p>
+                        <div class="grid grid-cols-2 gap-4 text-xs border-t pt-4">
+                            <div><p class="font-bold text-velox-blue">Potência</p><p>115 kWp</p></div>
+                            <div><p class="font-bold text-velox-blue">Geração</p><p>14.000 kWh/mês</p></div>
+                        </div>
+                        <div class="mt-6 flex items-center justify-between bg-gray-50 p-3 rounded">
+                            <span class="text-xs font-bold text-gray-400">ECONOMIA MENSAL</span>
+                            <span class="economy-badge">R$ 9.200</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="portfolio-card border lg:col-span-3 lg:flex items-center">
+                    <img src="https://veloxsolar.com/wp-content/uploads/2024/08/usina-solar.jpg" class="lg:w-1/2 h-72 lg:h-96 object-cover" alt="Usina">
+                    <div class="p-10 lg:w-1/2">
+                        <span class="text-xs font-bold text-velox-green tracking-widest uppercase">Projeto Especial</span>
+                        <h3 class="text-3xl font-bold text-velox-blue mt-2 mb-4">Usinas de Investimento</h3>
+                        <p class="text-gray-600 mb-8 leading-relaxed">Foco em rentabilidade e sustentabilidade de larga escala. Projetos de alto impacto financeiro.</p>
+                        <div class="grid grid-cols-2 gap-8 mb-8 border-y py-6">
+                            <div><p class="text-xs font-bold text-velox-blue uppercase">Potência</p><p class="text-2xl font-bold">1.4 MWp</p></div>
+                            <div><p class="text-xs font-bold text-velox-blue uppercase">Geração</p><p class="text-2xl font-bold">183.400 kWh</p></div>
+                        </div>
+                        <div class="flex items-center justify-between bg-velox-blue p-5 rounded-lg text-white">
+                            <span class="font-bold">RENTABILIDADE MENSAL</span>
+                            <span class="text-velox-green text-2xl font-black">R$ 110.040</span>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div>
-                <h3 class="text-5xl font-bold text-velox-green mb-2">GUARULHOS</h3>
-                <p class="text-gray-500 font-medium uppercase text-sm tracking-widest">Atendimento Local</p>
+        </div>
+    </section>
+
+    <section class="py-24 bg-gray-100">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-velox-blue text-4xl font-extrabold mb-4 uppercase">Soluções Energéticas</h2>
+                <p class="text-gray-500">Tecnologia além do painel solar.</p>
+            </div>
+
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
+                <div class="text-center">
+                    <img src="https://veloxsolar.com/wp-content/uploads/2024/08/pro-1.jpg" class="w-full rounded-lg shadow-md mb-4" alt="Fotovoltaica">
+                    <p class="font-bold text-sm text-velox-blue">Fotovoltaica</p>
+                </div>
+                <div class="text-center">
+                    <img src="https://veloxsolar.com/wp-content/uploads/2024/08/pro-2.jpg" class="w-full rounded-lg shadow-md mb-4" alt="Crédito Carbono">
+                    <p class="font-bold text-sm text-velox-blue leading-tight">UCS e Crédito Carbono</p>
+                </div>
+                <div class="text-center">
+                    <img src="https://veloxsolar.com/wp-content/uploads/2024/08/pro-3.jpg" class="w-full rounded-lg shadow-md mb-4" alt="Eletroposto">
+                    <p class="font-bold text-sm text-velox-blue">Eletroposto</p>
+                </div>
+                <div class="text-center">
+                    <img src="https://veloxsolar.com/wp-content/uploads/2024/08/pro-5.jpg" class="w-full rounded-lg shadow-md mb-4" alt="Assinatura">
+                    <p class="font-bold text-sm text-velox-blue leading-tight">Energia por Assinatura</p>
+                </div>
+                <div class="text-center">
+                    <img src="https://veloxsolar.com/wp-content/uploads/2024/08/pro-6.jpg" class="w-full rounded-lg shadow-md mb-4" alt="Mercado Livre">
+                    <p class="font-bold text-sm text-velox-blue leading-tight">Mercado Livre</p>
+                </div>
+                <div class="text-center">
+                    <img src="https://veloxsolar.com/wp-content/uploads/2024/08/pro-9.jpg" class="w-full rounded-lg shadow-md mb-4" alt="Mobilidade">
+                    <p class="font-bold text-sm text-velox-blue">Mobilidade Elétrica</p>
+                </div>
             </div>
         </div>
     </section>
 
     <footer id="contato" class="py-24 bg-velox-blue text-white">
         <div class="container mx-auto px-6">
-            
-            <div class="text-center mb-20">
-                <img src="https://github.com/solviumbr/meu-primeiro-site/blob/main/Logo-VeloxSolar-Final-04.png?raw=true" 
-                     alt="Velox Solar" 
-                     class="logo-velox mx-auto mb-10">
+            <div class="text-center mb-16">
+                <img src="https://github.com/solviumbr/meu-primeiro-site/blob/main/Logo-VeloxSolar-Final-04.png?raw=true" alt="Velox Solar" class="logo-velox mx-auto mb-10">
                 <h2 class="text-3xl md:text-5xl font-extrabold leading-tight">Sua independência energética começa aqui.</h2>
             </div>
-
-            <div class="grid md:grid-cols-2 gap-16 items-start max-w-6xl mx-auto">
+            <div class="grid md:grid-cols-2 gap-12 items-start max-w-6xl mx-auto">
                 <div class="flex flex-col gap-6 items-center md:items-end">
-                    <a href="https://wa.me/551152865321" target="_blank" class="btn-social-footer">
-                        <i class="fab fa-whatsapp text-2xl"></i> WhatsApp
-                    </a>
-                    <a href="https://instagram.com/veloxsolarguarulhos" target="_blank" class="btn-social-footer">
-                        <i class="fab fa-instagram text-2xl"></i> Instagram
-                    </a>
-                    <a href="https://facebook.com/veloxsolarguarulhos" target="_blank" class="btn-social-footer">
-                        <i class="fab fa-facebook text-2xl"></i> Facebook
-                    </a>
+                    <a href="https://wa.me/551152865321" target="_blank" class="btn-social-footer"><i class="fab fa-whatsapp text-2xl"></i> WhatsApp</a>
+                    <a href="https://instagram.com/veloxsolarguarulhos" target="_blank" class="btn-social-footer"><i class="fab fa-instagram text-2xl"></i> Instagram</a>
+                    <a href="https://facebook.com/veloxsolarguarulhos" target="_blank" class="btn-social-footer"><i class="fab fa-facebook text-2xl"></i> Facebook</a>
                 </div>
-                
                 <div class="flex flex-col gap-6 items-center md:items-start">
                     <div class="bg-white/5 p-8 rounded-2xl border border-white/10 w-full max-w-md">
-                        <h4 class="text-velox-green font-bold text-xl mb-4 text-center md:text-left">Unidade Centro Guarulhos</h4>
-                        <p class="text-blue-100 mb-2 font-medium text-center md:text-left">guarulhos.centro@veloxsolarenergia.com.br</p>
-                        <p class="text-blue-200 text-sm mb-8 leading-relaxed text-center md:text-left">
-                            R. Felício Marcondes, 266<br>
-                            Centro, Guarulhos - SP, 07010-030<br>
-                            Guaru Plaza Shopping
-                        </p>
-                        <a href="http://maps.google.com/?q=GUARU+PLAZA+SHOPPING+R.+Felicio+Marcondes+266+Centro+Guarulhos" target="_blank" class="btn-social-footer !w-full">
-                            <i class="fas fa-map-marker-alt text-xl"></i> Ver no Google Maps
-                        </a>
+                        <h4 class="text-velox-green font-bold text-xl mb-4">Unidade Centro Guarulhos</h4>
+                        <p class="text-blue-100 mb-8 text-sm">R. Felício Marcondes, 266 - Guaru Plaza Shopping<br>Guarulhos - SP, 07010-030</p>
+                        <a href="http://maps.google.com/?q=GUARU+PLAZA+SHOPPING+R.+Felicio+Marcondes+266+Centro+Guarulhos" target="_blank" class="btn-social-footer !w-full"><i class="fas fa-map-marker-alt text-xl"></i> Abrir no Google Maps</a>
                     </div>
                 </div>
-            </div>
-
-            <div class="pt-16 mt-20 border-t border-white/10 text-center text-sm text-blue-400">
-                <p>© 2026 Velox Solar Guarulhos - Franqueado Autorizado.</p>
             </div>
         </div>
     </footer>
@@ -174,11 +253,9 @@
         a.id = "ra_wc_chatbot";
         a.setAttribute("slug", "arll4suKM2WNQxqahZywCINmOQr0rw1k8HuGawib");
         document.body.appendChild(a);
-        let d = e.scripts[e.scripts.length - 1],
-            r = e.createElement("script");
+        let d = e.scripts[e.scripts.length - 1], r = e.createElement("script");
         r.id = "ra_chatbot" + Math.floor(200 * Math.random());
-        r.defer = true;
-        r.src = "https://sitewidget.net/chatbot-sdk.js";
+        r.defer = true; r.src = "https://sitewidget.net/chatbot-sdk.js";
         d.parentElement.insertBefore(r, d.nextSibling);
       })(document);
     </script>
