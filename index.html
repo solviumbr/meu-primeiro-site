@@ -26,7 +26,8 @@
             background: linear-gradient(rgba(22, 40, 80, 0.7), rgba(22, 40, 80, 0.7)), 
                         url('https://images.unsplash.com/photo-1508514177221-188b1cf16e9d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80');
             background-size: cover;
-            background-position: center;
+            /* --- AJUSTADO: background-position agora fixa a imagem 20% do topo --- */
+            background-position: center 20%;
             min-height: 80vh;
             display: flex;
             align-items: center;
@@ -90,7 +91,7 @@
             background-color: var(--velox-green);
         }
 
-        /* --- NOVO: Estilo do Rodapé com Imagem de Fundo --- */
+        /* Estilo do Rodapé com Imagem de Fundo */
         .footer-bg {
             /* Imagem com sobreposição escura para garantir leitura do texto branco */
             background: linear-gradient(rgba(16, 30, 60, 0.9), rgba(16, 30, 60, 0.95)), 
@@ -99,7 +100,6 @@
             background-position: center;
             background-attachment: scroll; /* Ou 'fixed' para efeito parallax */
         }
-        /* --- FIM DO NOVO ESTILO --- */
 
     </style>
 </head>
@@ -201,7 +201,7 @@
         </div>
     </section>
 
-    <section class="py-24 bg-gray-100">
+                <section class="py-24 bg-gray-100">
         <div class="container mx-auto px-6">
             <div class="text-center mb-16">
                 <h2 class="text-velox-blue text-4xl font-extrabold mb-4 uppercase">Soluções Energéticas</h2>
